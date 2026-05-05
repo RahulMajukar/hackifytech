@@ -1,3 +1,7 @@
+> **Status:** ⚠️ UI ONLY — Course listing (`/courses`) and course detail (`/courses/[slug]`) pages are built.
+> Data is hardcoded in `src/data/courses.js`. Syllabus PDF download works via `@react-pdf/renderer`.
+> Payload CMS Courses/CourseModules collections and admin CRUD have not been started.
+
 # Module 02: Course Management
 
 ## Payload Collections

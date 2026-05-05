@@ -1,9 +1,12 @@
+> **Status:** ❌ PLANNED — backend (Payload CMS) not yet started. This is the target RBAC design for when authentication and dashboards are built.
+
 # Role-Based Access Control (RBAC)
 
-## The Four Roles
+## The Five Roles
 | Role | Slug | Dashboard Route |
 |------|------|----------------|
 | Super Admin | `super-admin` | /dashboard/admin |
+| Admin | `admin` | /dashboard/admin |
 | Trainer | `trainer` | /dashboard/trainer |
 | Student | `student` | /dashboard/student |
 | Placement Team | `placement` | /dashboard/placement |
@@ -16,6 +19,12 @@
 - Access all dashboards and reports
 - Revenue, analytics, CSR reports
 - Platform configuration
+
+### Admin
+- Same as Super Admin except cannot manage other Super Admins or system-level config
+- Full CRUD on Users, Courses, Batches, Assignments, Payments, Blogs, Placements
+- Access all dashboards and reports
+- Cannot change own role or delete Super Admin accounts
 
 ### Trainer
 - Read/Write: Assignments, Attendance, MockTests (own batches only)
@@ -40,11 +49,15 @@
 ```typescript
 // payload/access/isAdmin.ts
 export const isAdmin = ({ req: { user } }) =>
+  user?.role === 'super-admin' || user?.role === 'admin'
+
+// payload/access/isSuperAdmin.ts
+export const isSuperAdmin = ({ req: { user } }) =>
   user?.role === 'super-admin'
 
 // payload/access/isTrainer.ts
 export const isTrainer = ({ req: { user } }) =>
-  user?.role === 'trainer' || user?.role === 'super-admin'
+  user?.role === 'trainer' || user?.role === 'admin' || user?.role === 'super-admin'
 
 // payload/access/isStudent.ts
 export const isStudent = ({ req: { user } }) =>
@@ -69,10 +82,10 @@ export const isTrainerOfBatch = async ({ req: { user }, doc }) => {
 import { NextResponse } from 'next/server'
 
 const ROLE_ROUTES = {
-  '/dashboard/admin': ['super-admin'],
-  '/dashboard/trainer': ['trainer', 'super-admin'],
-  '/dashboard/student': ['student', 'super-admin'],
-  '/dashboard/placement': ['placement', 'super-admin'],
+  '/dashboard/admin': ['super-admin', 'admin'],
+  '/dashboard/trainer': ['trainer', 'admin', 'super-admin'],
+  '/dashboard/student': ['student', 'super-admin', 'admin'],
+  '/dashboard/placement': ['placement', 'admin', 'super-admin'],
 }
 
 export function middleware(req) {

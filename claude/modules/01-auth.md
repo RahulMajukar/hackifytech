@@ -1,3 +1,8 @@
+> **Status:** ⚠️ UI ONLY — Auth pages (signup, forgot-password, reset-password) and login dialog are built in `src/views/` and `src/components/LoginDialog.jsx`.
+> All Supabase/backend calls have been removed. Auth is mocked via `src/contexts/AuthContext.jsx` (useState only).
+> Payload CMS Users collection and real JWT sessions have not been started.
+> **Current auth routes:** `/signup`, `/forgot-password`, `/reset-password` (exist) — `/login` is a dialog, not a page.
+
 # Module 01: Authentication & Authorization
 
 ## Pages
@@ -12,7 +17,7 @@
   name: text (required)
   email: email (required, unique)
   password: text (Payload hashes automatically)
-  role: select ['super-admin', 'trainer', 'student', 'placement']
+  role: select ['super-admin', 'trainer', 'student', 'placement', 'admin']
   phone: text
   college: text (for students)
   githubUrl: text

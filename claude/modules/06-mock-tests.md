@@ -1,3 +1,5 @@
+> **Status:** ❌ PLANNED — Requires Payload CMS MockTests + TestResults collections and exam UI. Depends on Batches (Module 03).
+
 # Module 06: Mock Test & Assessment
 
 ## Payload Collections

@@ -1,3 +1,5 @@
+> **Status:** ❌ PLANNED — Requires Payload CMS NotificationLogs collection, Nodemailer SMTP setup, React Email templates, and Payload afterChange hooks. No email sending is implemented yet.
+
 # Module 11: Notification System
 
 ## Email Triggers

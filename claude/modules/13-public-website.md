@@ -1,3 +1,7 @@
+> **Status:** ✅ IMPLEMENTED (frontend only)
+> All main public pages are built and live in `src/views/` + `app/(public)/`.
+> Not yet implemented: `/trainers`, `/placements` (public stats page), `/webinar`, `/verify/[id]` (certificate verification), lead capture to DB, JSON-LD structured data.
+
 # Module 13: Public Website
 
 ## Page Routes

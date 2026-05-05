@@ -1,3 +1,5 @@
+> **Status:** ⚠️ UI ONLY — Cart page (`/cart`) and Checkout page (`/checkout`) are built with static hardcoded data. No Razorpay integration, no Payload Payments collection, no real payment processing.
+
 # Module 09: Payment Management
 
 ## Payload Collection: Payments

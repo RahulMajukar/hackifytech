@@ -1,3 +1,5 @@
+> **Status:** ❌ PLANNED — Requires Payload CMS Companies + Placements collections, placement team dashboard, and student placement views.
+
 # Module 08: Placement Management
 
 ## Payload Collections

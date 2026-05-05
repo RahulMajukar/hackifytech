@@ -1,3 +1,5 @@
+> **Status:** ❌ PLANNED — No batch management UI or backend exists yet. Requires Payload CMS Batches collection and admin/trainer dashboards.
+
 # Module 03: Batch Management
 
 ## What is a Batch?

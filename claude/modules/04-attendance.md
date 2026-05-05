@@ -1,3 +1,5 @@
+> **Status:** ❌ PLANNED — Requires Payload CMS Attendance collection, trainer dashboard, and student dashboard. Depends on Batches (Module 03) being built first.
+
 # Module 04: Attendance Management
 
 ## Payload Collection: Attendance

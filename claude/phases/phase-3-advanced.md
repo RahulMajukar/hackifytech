@@ -1,3 +1,5 @@
+> **Status:** ❌ FUTURE VISION — Phase 3 begins after Phase 2 (full LMS) is complete and live. Estimated: 6+ months after Phase 1 launch.
+
 # Phase 3 – Platform Expansion (Months 6–12)
 
 ## Goal

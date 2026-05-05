@@ -1,3 +1,6 @@
+> **Status:** ⚠️ UI ONLY — Blog listing (`/blogs`) and blog detail (`/blogs/[slug]`) pages are built with hardcoded static data.
+> No Payload CMS Blogs collection, no rich text editor, no Mermaid rendering, no code highlighting yet.
+
 # Module 10: Blog & Content Management
 
 ## Payload Collection: Blogs

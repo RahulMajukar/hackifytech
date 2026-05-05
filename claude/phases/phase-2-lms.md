@@ -1,3 +1,5 @@
+> **Status:** ❌ NOT STARTED — Phase 2 begins after Phase 1 backend (Payload CMS + PostgreSQL + Auth) is complete. Estimated: 12 weeks after Phase 1 backend launch.
+
 # Phase 2 – LMS Features (Weeks 9–20)
 
 ## Goal

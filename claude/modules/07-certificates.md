@@ -1,3 +1,5 @@
+> **Status:** ❌ PLANNED — Requires Payload CMS Certificates collection, eligibility check logic (attendance + assignments + tests), Puppeteer PDF generation, and public /verify/[id] page. Depends on Modules 03–06.
+
 # Module 07: Certificate Management
 
 ## Certificate Types

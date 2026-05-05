@@ -1,3 +1,5 @@
+> **Status:** ❌ PLANNED — Requires CSR-sponsored student tracking in the Payments/Batches collections, a dedicated admin CSR dashboard, and PDF/CSV report generation. Depends on Modules 03, 04, 07, 08, 09.
+
 # Module 12: CSR & NGO Reporting
 
 ## Purpose

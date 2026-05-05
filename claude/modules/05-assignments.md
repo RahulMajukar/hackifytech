@@ -1,3 +1,5 @@
+> **Status:** ❌ PLANNED — Requires Payload CMS Assignments + AssignmentSubmissions collections and trainer/student dashboards. Depends on Batches (Module 03).
+
 # Module 05: Assignment Management
 
 ## Payload Collections
