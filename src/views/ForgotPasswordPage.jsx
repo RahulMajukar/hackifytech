@@ -8,7 +8,6 @@ import { Label } from "@/components/ui/label";
 import { m } from "framer-motion";
 import { GraduationCap, Loader2, CheckCircle, ArrowLeft, Mail, ShieldCheck, KeyRound } from "lucide-react";
 import { PasswordInput } from "@/components/PasswordInput";
-import { supabase } from "@/integrations/supabase/client";
 
 export default function ForgotPasswordPage() {
   const [step, setStep] = useState(1); // 1=email, 2=otp, 3=new password, 4=success
@@ -19,8 +18,7 @@ export default function ForgotPasswordPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Step 1: Send OTP
-  const handleSendOtp = async (e) => {
+  const handleSendOtp = (e) => {
     e.preventDefault();
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setError("Please enter a valid email address");
@@ -28,14 +26,10 @@ export default function ForgotPasswordPage() {
     }
     setLoading(true);
     setError("");
-    const { error: err } = await supabase.auth.resetPasswordForEmail(email);
-    setLoading(false);
-    if (err) setError(err.message);
-    else setStep(2);
+    setTimeout(() => { setLoading(false); setStep(2); }, 1000);
   };
 
-  // Step 2: Verify OTP
-  const handleVerifyOtp = async (e) => {
+  const handleVerifyOtp = (e) => {
     e.preventDefault();
     if (!otp || otp.length < 6) {
       setError("Please enter the 6-digit OTP");
@@ -43,18 +37,10 @@ export default function ForgotPasswordPage() {
     }
     setLoading(true);
     setError("");
-    const { error: err } = await supabase.auth.verifyOtp({
-      email,
-      token: otp,
-      type: "recovery",
-    });
-    setLoading(false);
-    if (err) setError(err.message);
-    else setStep(3);
+    setTimeout(() => { setLoading(false); setStep(3); }, 1000);
   };
 
-  // Step 3: Reset password
-  const handleResetPassword = async (e) => {
+  const handleResetPassword = (e) => {
     e.preventDefault();
     if (password.length < 6) {
       setError("Password must be at least 6 characters");
@@ -66,10 +52,7 @@ export default function ForgotPasswordPage() {
     }
     setLoading(true);
     setError("");
-    const { error: err } = await supabase.auth.updateUser({ password });
-    setLoading(false);
-    if (err) setError(err.message);
-    else setStep(4);
+    setTimeout(() => { setLoading(false); setStep(4); }, 1000);
   };
 
   const stepIndicator = (

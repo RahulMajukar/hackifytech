@@ -5,12 +5,6 @@
       "static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js"
     ]
   },
-  "src\\components\\DownloadSyllabusButton.jsx -> @/components/PDFButtonInner": {
-    "id": "src\\components\\DownloadSyllabusButton.jsx -> @/components/PDFButtonInner",
-    "files": [
-      "static/chunks/_app-pages-browser_src_components_PDFButtonInner_jsx.js"
-    ]
-  },
   "src\\components\\MotionProvider.jsx -> framer-motion": {
     "id": "src\\components\\MotionProvider.jsx -> framer-motion",
     "files": [

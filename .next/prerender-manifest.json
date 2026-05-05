@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/courses/full-stack-web-development":{},"/courses/java-full-stack":{},"/courses/python-data-science":{},"/courses/react-frontend-mastery":{},"/courses/devops-cloud":{},"/courses/mobile-app-development":{}},"dynamicRoutes":{"/courses/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/courses/[slug]","routeRegex":"^\\/courses\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"c658dde0af6d3c7b41de3332e2f7cd4c","previewModeSigningKey":"f999220fd684aea1f6557c63298eb4943af081421c276cb3674d41278c54ccaf","previewModeEncryptionKey":"938519507c3118e964689c4df18346a5be9820fbe5b29e308beabde7a5e1cb39"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "c328df009ca50aa03ae0df4ad641cb3f",
+    "previewModeSigningKey": "aead1537618fda6e0724ed74a200bc0813ce7cff21d023ca992b4e6b60f88106",
+    "previewModeEncryptionKey": "db992d0909c1f026952d6c8f983502970dbdd5fc298819abbb6ae74395c0a6f5"
+  }
+}

@@ -1,15 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { m } from "framer-motion";
 import { GraduationCap, Loader2, CheckCircle } from "lucide-react";
 import { PasswordInput } from "@/components/PasswordInput";
-import { supabase } from "@/integrations/supabase/client";
 
 export default function ResetPasswordPage() {
   const [password, setPassword] = useState("");
@@ -17,25 +14,14 @@ export default function ResetPasswordPage() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
-  const router = useRouter();
 
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (!hash.includes("type=recovery")) {
-      router.push("/");
-    }
-  }, [router]);
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (password.length < 6) { setError("Password must be at least 6 characters"); return; }
     if (password !== confirmPassword) { setError("Passwords don't match"); return; }
     setLoading(true);
     setError("");
-    const { error: err } = await supabase.auth.updateUser({ password });
-    setLoading(false);
-    if (err) setError(err.message);
-    else setSuccess(true);
+    setTimeout(() => { setLoading(false); setSuccess(true); }, 1000);
   };
 
   if (success) {
