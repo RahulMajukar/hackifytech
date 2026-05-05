@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -v \"^ui$\")",
+      "Bash(rm -rf \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/[[...slug]]\")",
+      "Bash(mkdir -p \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/blogs\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/blogs/[slug]\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/tutorials\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/tutorials/[category]\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/about\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/courses\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/books\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/services\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/contact\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/cart\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(public\\)/checkout\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(auth\\)/signup\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(auth\\)/forgot-password\" \"c:/Users/HackifyTech/Desktop/hackifytech/hackify-tech/app/\\(auth\\)/reset-password\")",
+      "Bash(bun run:*)",
+      "Bash(npx next:*)"
+    ]
+  }
+}
