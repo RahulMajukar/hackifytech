@@ -82,7 +82,7 @@ export default function ContactPage() {
 
   const set = (field) => (e) => setForm((f) => ({ ...f, [field]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const result = contactSchema.safeParse(form);
     if (!result.success) {
@@ -93,7 +93,26 @@ export default function ContactPage() {
     }
     setErrors({});
     setLoading(true);
-    setTimeout(() => { setLoading(false); setSuccess(true); }, 1500);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone || undefined,
+          message: form.message,
+          type: form.course ? "course-enquiry" : "contact",
+          source: "website",
+        }),
+      });
+      if (!res.ok) throw new Error("Server error");
+      setSuccess(true);
+    } catch {
+      setErrors({ message: "Something went wrong. Please try again or WhatsApp us directly." });
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (success) {

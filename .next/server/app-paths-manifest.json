@@ -1,6 +1,0 @@
-{
-  "/(public)/page": "app/(public)/page.js",
-  "/(public)/courses/page": "app/(public)/courses/page.js",
-  "/(public)/about/page": "app/(public)/about/page.js",
-  "/(public)/services/page": "app/(public)/services/page.js"
-}

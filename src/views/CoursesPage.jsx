@@ -3,8 +3,8 @@
 import { m } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Clock, BookOpen, Monitor, MapPin, Zap, ArrowRight, CheckCircle } from "lucide-react";
-import { coursesData } from "@/data/courses";
+import { Clock, BookOpen, Monitor, MapPin, Zap, ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { useCourses } from "@/hooks/useCourses";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -12,6 +12,8 @@ const fadeUp = {
 };
 
 export default function CoursesPage() {
+  const { data: courses, isLoading } = useCourses();
+
   return (
     <div className="py-12 md:py-16">
       <div className="container">
@@ -22,8 +24,14 @@ export default function CoursesPage() {
           </p>
         </div>
 
+        {isLoading && (
+          <div className="flex justify-center py-20">
+            <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
+          </div>
+        )}
+
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {coursesData.map((course, i) => (
+          {(courses || []).map((course, i) => (
             <m.div
               key={course.id}
               className="card-elevated rounded-xl border bg-card overflow-hidden flex flex-col group"
