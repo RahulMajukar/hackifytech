@@ -9,14 +9,6 @@ const nextConfig = {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [],
   },
-
-  // Turbopack resolveAlias — must be a relative POSIX path, not a Windows absolute path
-  turbopack: {
-    resolveAlias: {
-      "@payload-config": "./payload.config.ts",
-    },
-  },
-
   async headers() {
     return [
       {
